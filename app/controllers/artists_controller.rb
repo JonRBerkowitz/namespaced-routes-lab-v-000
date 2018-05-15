@@ -1,7 +1,9 @@
 class ArtistsController < ApplicationController
   before_action :set_preferences, only: [:index, :new]
   def index
-    @artists = Artist.all
+    if @preferences
+      @artists = Artist.all
+    end
   end
 
   def show
