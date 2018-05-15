@@ -1,5 +1,4 @@
 class ArtistsController < ApplicationController
-  
 
   def index
     if @preferences && @preferences.artist_sort_order
