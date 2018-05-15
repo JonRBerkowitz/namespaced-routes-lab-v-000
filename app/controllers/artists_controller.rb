@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   include PreferencesHelper
   before_action :set_preferences, only: [:index, :new]
+  
   def index
     if @preferences && @preferences.artist_sort_order
       @artists = Artist.order(name: @preferences.artist_sort_order)
